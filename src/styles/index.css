@@ -1,29 +1,30 @@
+@import "./components/bookmark-button.css";
+
 :root {
-  --background: #24273a; /* Base background */
-  --background-alt: #23273e; /* Alternate background */
-  --background-light: #323547; /* Light background */
+  --background: #24273a;
+  --background-alt: #23273e;
+  --background-light: #323547;
 
-  --text: #d9e0ee; /* Main text color */
-  --text-muted: #a4b3e6; /* Muted text */
-  --text-subtle: #c6d0f5; /* Subtle text */
+  --text: #d9e0ee;
+  --text-muted: #a4b3e6;
+  --text-subtle: #c6d0f5;
 
-  --overlay-1: #545c75; /* Overlay dark */
-  --overlay-2: #434758; /* Overlay darker */
+  --overlay-1: #545c75;
+  --overlay-2: #434758;
 
-  --border: #323547; /* Border color */
-  --surface-1: #23273e; /* Surface 1 */
-  --surface-2: #2a2e47; /* Surface 2 */
-  --surface-3: #323547; /* Surface 3 */
+  --border: #323547;
+  --surface-1: #323547;
+  --surface-2: #2a2e47;
+  --surface-3: #23273e;
 
-  /* Accent colors (simplified names) */
-  --mauve: #c6a0f6; /* Mauve */
-  --pink: #f5a3b8; /* Pink */
-  --peach: #f7c2a1; /* Peach */
-  --yellow: #f7e4a3; /* Yellow */
-  --green: #a6d189; /* Green */
-  --teal: #89dceb; /* Teal */
-  --blue: #74c7ec; /* Blue */
-  --lavender: #b4befe; /* Lavender */
+  --mauve: #c6a0f6;
+  --pink: #f5a3b8;
+  --peach: #f7c2a1;
+  --yellow: #f7e4a3;
+  --green: #a6d189;
+  --teal: #89dceb;
+  --blue: #74c7ec;
+  --lavender: #b4befe;
 }
 
 * {
@@ -31,4 +32,9 @@
   margin: 0;
   color: var(--text);
   background: var(--background);
+}
+
+.favorite {
+  display: flex;
+  gap: 1rem;
 }
