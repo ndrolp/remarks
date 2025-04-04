@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Bookmarks, { Bookmark } from "../lib/Bookmarks";
 import Utils from "../lib/Utils";
+import "../styles/index.css";
 
 export default function NewTab() {
   const [bookmarks, setBookmarks] =
@@ -31,8 +32,8 @@ export default function NewTab() {
 
   return (
     <div style={{ padding: "16px" }}>
-      <h1>Bookmarks</h1>
-      {(bookmarks?.children?.length ?? 0) > 0 ? (
+      <h1>Remarks</h1>
+      {bookmarks?.children ? (
         renderBookmarks(bookmarks?.children || [])
       ) : (
         <p>Loading...</p>
