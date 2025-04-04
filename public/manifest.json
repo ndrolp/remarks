@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Remarks",
+  "version": "1.0",
+  "description": "A Chrome extension with a new tab and a popup called Remarks.",
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": "icon.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "src/newtab/index.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["bookmarks"]
+}
