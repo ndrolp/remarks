@@ -1,17 +1,20 @@
 import "../styles/index.css";
-import { useBookmarks } from "../hooks/useBookmarks";
 import { Bookmark } from "../components/Bookmark";
 import { GoogleSearch } from "./components/GoogleSearch";
+import { useContext } from "react";
+import { RemarksContext } from "./context/remarksContext";
 
 export default function NewTab() {
-    const { noChildNodes } = useBookmarks();
+    const { bookmarks } = useContext(RemarksContext);
 
     return (
-        <div style={{ padding: "16px" }}>
+        <div
+            className="container"
+            style={{ paddingTop: "16px", paddingBottom: "16px" }}
+        >
             <GoogleSearch />
-            <h1>Remarks</h1>
-            <div className="favorite">
-                {noChildNodes.map((node) => {
+            <div className="favorite ram-stack">
+                {bookmarks.noChildNodes.map((node) => {
                     return <Bookmark bookmark={node} />;
                 })}
             </div>

@@ -1,7 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import Bookmarks from "../lib/Bookmarks";
 
-export const useBookmarks = () => {
+export interface IUseBookmarksValue {
+    bookmarks: chrome.bookmarks.BookmarkTreeNode | null;
+    refreshBookmarks: () => void;
+    noChildNodes: chrome.bookmarks.BookmarkTreeNode[];
+}
+
+export const useBookmarks = (): IUseBookmarksValue => {
     const [bookmarks, setBookmarks] =
         useState<chrome.bookmarks.BookmarkTreeNode | null>(null);
 

@@ -1,15 +1,17 @@
 .google-search {
     display: grid;
-    padding: 2rem;
     place-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
     & input {
-        padding: 1rem 4rem;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
         font-size: 1.2rem;
-        border-radius: 3rem;
+        border-radius: 1rem;
         background: var(--surface-1);
         color: var(--text);
-        width: 80%;
+        width: 100%;
         margin: auto;
         outline: none;
         transition: 0.3s ease-in-out;

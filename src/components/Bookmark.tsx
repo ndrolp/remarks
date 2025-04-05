@@ -15,7 +15,7 @@ export const Bookmark = (props: { bookmark: IBookmark }) => {
         return domain ? `https://${domain}/favicon.ico` : "default-favicon.png";
     }, [props.bookmark]);
     return (
-        <div
+        <button
             className="bookmark-button"
             onClick={() => {
                 window.location.href = props.bookmark.url ?? "/";
@@ -23,6 +23,6 @@ export const Bookmark = (props: { bookmark: IBookmark }) => {
         >
             <img src={favicon} alt={props.bookmark.title + " icon"} />
             <p>{props.bookmark.title}</p>
-        </div>
+        </button>
     );
 };
