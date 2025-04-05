@@ -1,0 +1,25 @@
+.google-search {
+    display: grid;
+    padding: 2rem;
+    place-items: center;
+
+    & input {
+        padding: 1rem 4rem;
+        font-size: 1.2rem;
+        border-radius: 3rem;
+        background: var(--surface-1);
+        color: var(--text);
+        width: 80%;
+        margin: auto;
+        outline: none;
+        transition: 0.3s ease-in-out;
+        display: block;
+        border: 1px solid transparent;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: var(--mauve);
+        }
+    }
+}
