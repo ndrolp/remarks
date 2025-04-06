@@ -17,6 +17,7 @@ export default function NewTab() {
                 {bookmarks.noChildNodes.map((node) => {
                     return <Bookmark bookmark={node} />;
                 })}
+                {bookmarks.noChildNodes.length < 14 ? <Bookmark isPlusButton /> : ""}
             </div>
         </div>
     );

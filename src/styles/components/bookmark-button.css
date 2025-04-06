@@ -8,14 +8,35 @@
     display: flex;
     place-items: center;
     gap: 1rem;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     outline: none;
     transition: 0.3s ease-in-out;
 
+    &.plus {
+        border: 2px dashed var(--teal);
+        background-color: transparent;
+        display: grid;
+        place-items: center;
+
+        &:hover,
+        &:focus {
+            border: 2px dashed var(--peach);
+
+            & * {
+                stroke: var(--peach);
+            }
+        }
+
+        & * {
+            transition: 0.3s ease-in-out;
+            stroke: var(--teal);
+        }
+    }
+
     &:hover,
     &:focus {
-        border: 1px solid var(--teal);
+        border: 2px solid var(--teal);
     }
 
     & img {
