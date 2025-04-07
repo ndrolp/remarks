@@ -1,59 +1,59 @@
 .bookmark-button {
-    cursor: pointer;
-    background: var(--surface-1);
-    color: var(--text);
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    display: inline;
-    display: flex;
+  cursor: pointer;
+  background: var(--surface-1);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  display: inline;
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+
+  &.plus {
+    border: 2px dashed var(--background-light);
+    background-color: transparent;
+    display: grid;
     place-items: center;
-    gap: 1rem;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-
-    &.plus {
-        border: 2px dashed var(--teal);
-        background-color: transparent;
-        display: grid;
-        place-items: center;
-
-        &:hover,
-        &:focus {
-            border: 2px dashed var(--peach);
-
-            & * {
-                stroke: var(--peach);
-            }
-        }
-
-        & * {
-            transition: 0.1s ease-in-out;
-            stroke: var(--teal);
-        }
-    }
 
     &:hover,
     &:focus {
-        border: 2px solid var(--teal);
+      border: 2px dashed var(--teal);
+
+      & * {
+        stroke: var(--teal);
+      }
     }
 
-    & img {
-        background: transparent;
-        aspect-ratio: 1;
-        width: 1.5rem;
-        height: 1.5rem;
-        pointer-events: none;
+    & * {
+      transition: 0.1s ease-in-out;
+      stroke: var(--background-light);
     }
+  }
 
-    & p {
-        background-color: var(--surface-1);
-        font-size: 1rem;
-        font-weight: bolld;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        pointer-events: none;
-    }
+  &:hover,
+  &:focus {
+    border: 2px solid var(--teal);
+  }
+
+  & img {
+    background: transparent;
+    aspect-ratio: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+  }
+
+  & p {
+    background-color: var(--surface-1);
+    font-size: 1rem;
+    font-weight: bolld;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+  }
 }

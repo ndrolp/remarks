@@ -1,27 +1,27 @@
 .google-search {
-    display: grid;
-    place-items: center;
-    margin-top: 32px;
-    margin-bottom: 32px;
+  display: grid;
+  place-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
-    & input {
-        box-sizing: border-box;
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-        border-radius: 1rem;
-        background: var(--surface-1);
-        color: var(--text);
-        width: 100%;
-        margin: auto;
-        outline: none;
-        transition: 0.3s ease-in-out;
-        display: block;
-        border: 1px solid transparent;
+  & input {
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background: var(--surface-1);
+    color: var(--text);
+    width: 100%;
+    margin: auto;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    display: block;
+    border: 2px solid transparent;
 
-        &:hover,
-        &:focus,
-        &:active {
-            border-color: var(--mauve);
-        }
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--mauve);
     }
+  }
 }

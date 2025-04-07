@@ -1,18 +1,71 @@
 .remarks-folder-container {
-    display: grid;
-    width: 100%;
-    gap: 1rem;
-    margin-top: 32px;
-    grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 32px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .remarks-folder {
-    background-color: var(--surface-1);
-    border-radius: 5px;
-    padding: 1rem;
+  background-color: var(--surface-1);
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 
-    & p {
-        background-color: var(--surface-1);
-        font-size: 1.1rem;
+  & .remarks-folder-title {
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--overlay-2);
+    margin-left: 0.3rem;
+  }
+
+  & * {
+    background-color: var(--surface-1);
+    transition: 0.3s ease-in-out;
+  }
+
+  & p {
+    background-color: var(--surface-1);
+    font-size: 1.1rem;
+  }
+}
+
+.remarks-folder-item {
+  width: 100%;
+  padding: 0.3rem;
+  display: flex;
+  gap: 1rem;
+  box-sizing: border-box;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+
+  & img {
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+
+  & svg {
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+
+  & .folder-bookmark,
+  & .folder-subfolder {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1rem;
+    place-items: center;
+  }
+
+  &:hover {
+    background-color: var(--overlay-1);
+
+    & * {
+      background-color: var(--overlay-1);
     }
+  }
 }
