@@ -1,0 +1,18 @@
+.remarks-folder-container {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 32px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.remarks-folder {
+    background-color: var(--surface-1);
+    border-radius: 5px;
+    padding: 1rem;
+
+    & p {
+        background-color: var(--surface-1);
+        font-size: 1.1rem;
+    }
+}

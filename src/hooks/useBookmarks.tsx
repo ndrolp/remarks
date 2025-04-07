@@ -5,6 +5,7 @@ export interface IUseBookmarksValue {
     bookmarks: chrome.bookmarks.BookmarkTreeNode | null;
     refreshBookmarks: () => void;
     noChildNodes: chrome.bookmarks.BookmarkTreeNode[];
+    baseFolders: chrome.bookmarks.BookmarkTreeNode[];
 }
 
 export const useBookmarks = (): IUseBookmarksValue => {
@@ -16,6 +17,11 @@ export const useBookmarks = (): IUseBookmarksValue => {
         return bookmarks.children.filter((node) => !node.children);
     }, [bookmarks]);
 
+    const baseFolders = useMemo(() => {
+        if (!bookmarks?.children) return [];
+        return bookmarks.children.filter((node) => node.children?.length ?? 0 > 0);
+    }, [bookmarks]);
+
     useEffect(() => {
         Bookmarks.getBookmarks().then((tree) => setBookmarks(tree));
     }, []);
@@ -24,5 +30,5 @@ export const useBookmarks = (): IUseBookmarksValue => {
         Bookmarks.getBookmarks().then((tree) => setBookmarks(tree));
     }
 
-    return { bookmarks, refreshBookmarks, noChildNodes };
+    return { bookmarks, refreshBookmarks, noChildNodes, baseFolders };
 };

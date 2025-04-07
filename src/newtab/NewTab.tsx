@@ -3,6 +3,7 @@ import { Bookmark } from "../components/Bookmark";
 import { GoogleSearch } from "./components/GoogleSearch";
 import { useContext } from "react";
 import { RemarksContext } from "./context/remarksContext";
+import FolderContainer from "./components/Folders/FolderContainer";
 
 export default function NewTab() {
     const { bookmarks } = useContext(RemarksContext);
@@ -19,6 +20,7 @@ export default function NewTab() {
                 })}
                 {bookmarks.noChildNodes.length < 14 ? <Bookmark isPlusButton /> : ""}
             </div>
+            <FolderContainer />
         </div>
     );
 }

@@ -6,7 +6,12 @@ export interface IRemarksContext {
 }
 
 export const RemarksContext = createContext<IRemarksContext>({
-    bookmarks: { bookmarks: null, noChildNodes: [], refreshBookmarks: () => { } },
+    bookmarks: {
+        bookmarks: null,
+        noChildNodes: [],
+        refreshBookmarks: () => { },
+        baseFolders: [],
+    },
 });
 
 interface IRemarksProviderProps {
