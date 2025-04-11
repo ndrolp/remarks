@@ -10,7 +10,7 @@ export default function NewTab() {
 
     return (
         <div
-            className="container"
+            className="container new-tab-container"
             style={{ paddingTop: "16px", paddingBottom: "16px" }}
         >
             <GoogleSearch />
